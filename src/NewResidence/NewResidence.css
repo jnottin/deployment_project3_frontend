@@ -1,0 +1,21 @@
+.newResidenceForm {
+    width: 20%;
+    top: 0;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 2s;
+}
+.newResidenceForm.closed {
+    height: 0%;
+    transition: 2s;
+}
+
+.newResidenceForm p {
+    padding: 5px;
+    color: white;
+}
+

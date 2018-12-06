@@ -1,0 +1,5 @@
+Functions:
+    1. RESERVE RESIDENTIAL/SHELTER - once submit button is pressed, LISTING is removed 
+
+
+

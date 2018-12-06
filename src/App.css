@@ -1,0 +1,25 @@
+.App {
+  text-align: center;
+}
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+/* 
+.columnLeft {
+  grid-column: 1;
+  grid-row: 1;
+}
+.columnRight {
+  grid-column: 2;
+  grid-row: 1;
+} */
