@@ -40,7 +40,7 @@ class EditResidence extends Component {
           beds: this.state.beds
         }
       )
-      .then(result => { });
+      .then(result => {});
   }
   handleRemove(e) {
     e.preventDefault();
@@ -48,7 +48,7 @@ class EditResidence extends Component {
       .delete(
         "http://localhost:3010/deleteResidence/" + this.props.match.params.id
       )
-      .then(result => { });
+      .then(result => {});
     return <Redirect to="/" />;
   }
 

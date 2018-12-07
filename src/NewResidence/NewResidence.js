@@ -49,8 +49,8 @@ class NewResidence extends Component {
 
   render() {
     return (
-      <div id="newResidenceForm" className="closed newResidenceForm">
-        <form className="newBook" onSubmit={this.handleFormSubmit}>
+      <div id="newResidenceForm" className="newResidenceForm">
+        <form className="newBookResidence" onSubmit={this.handleFormSubmit}>
           <p>
             <label htmlFor="name">Name Of Residence</label> <br />
             <input
