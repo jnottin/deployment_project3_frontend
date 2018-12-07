@@ -71,7 +71,7 @@ class Shelters extends Component {
       <div className="shelterSide">
         <div className="shelterButtonHeader">
           <h2 className="sheltersHeader">Shelters</h2>
-          <button onClick={this.newShelterForm} className="newShelterFormBtn" id="newShelterFormBtn">
+          <button onClick={this.newShelterForm} className="newFormBtn" id="newShelterFormBtn">
             Add New Shelter
           </button>
         </div>
