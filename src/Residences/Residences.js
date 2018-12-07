@@ -11,7 +11,7 @@ class Residences extends Component {
     this.state = {
       residences: []
     };
-    this.handleRemove = this.handleRemove.bind(this);
+    // this.handleRemove = this.handleRemove.bind(this);
   }
   newResidenceForm = () => {
     if (document.getElementById("newResidenceForm").style.height === "100%") {
@@ -21,13 +21,13 @@ class Residences extends Component {
     }
   };
 
-  handleRemove = residence => {
-    // e.prevexntDefault()
-    console.log("hit handleRemove function");
-    axios
-      .delete("http://localhost:3010/reserveResidence/" + residence)
-      .then(result => { });
-  };
+  // handleRemove = residence => {
+  //   // e.prevexntDefault()
+  //   console.log("hit handleRemove function");
+  //   axios
+  //     .delete("http://localhost:3010/reserveResidence/" + residence)
+  //     .then(result => {});
+  // };
 
   componentDidMount() {
     axios
@@ -42,13 +42,13 @@ class Residences extends Component {
       });
   }
 
-  handleUpdate(e) {
-    e.preventDefault();
-    console.log("hit handleUpdate function");
-    axios
-      .put("http://localhost:3010/update/" + this.residences._id)
-      .then(result => { });
-  }
+  // handleUpdate(e) {
+  //   e.preventDefault();
+  //   console.log("hit handleUpdate function");
+  //   axios
+  //     .put("http://localhost:3010/update/" + this.residences._id)
+  //     .then(result => {});
+  // }
 
   // handleFormSubmit(event) {
   //   event.preventDefault();
