@@ -31,7 +31,8 @@ class NewShelter extends Component {
     document.getElementById("newShelterForm").style.height = "0";
     event.preventDefault();
     axios
-      .post("http://localhost:3010/project3roomKind", {
+      // .post("http://localhost:3010/project3roomKind", {
+      .post("http://roomkind.herokuapp.com/project3roomKind", {
         name: this.state.name,
         location: this.state.location,
         beds: this.state.beds,

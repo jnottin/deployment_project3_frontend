@@ -31,7 +31,10 @@ class EditResidence extends Component {
 
     axios
       .put(
-        "http://localhost:3010/editResidence/" + this.props.match.params.id,
+        "http://roomkind.herokuapp.com/editResidence/" +
+          this.props.match.params.id,
+        // "http://localhost:3010/editResidence/" + this.props.match.params.id,
+
         {
           name: this.state.name,
           image: this.state.image,
@@ -46,7 +49,9 @@ class EditResidence extends Component {
     e.preventDefault();
     axios
       .delete(
-        "http://localhost:3010/deleteResidence/" + this.props.match.params.id
+        "http://roomkind.herokuapp.com/deleteResidence/" +
+          this.props.match.params.id
+        // "http://localhost:3010/deleteResidence/" + this.props.match.params.id
       )
       .then(result => {});
     return <Redirect to="/" />;
@@ -54,7 +59,9 @@ class EditResidence extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:3010/api/roomKind/residences")
+      .get("http://roomkind.herokuapp.com/api/roomKind/residences")
+      // .get("http://localhost:3010/api/roomKind/residences")
+
       .then(res => {
         this.setState({
           residences: res.data

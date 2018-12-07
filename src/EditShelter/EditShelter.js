@@ -34,7 +34,9 @@ class EditShelter extends Component {
     console.log(this.props.match.params._id);
     axios
       .delete(
-        "http://localhost:3010/deleteShelter/" + this.props.match.params.id
+        "http://roomkind.herokuapp.com/deleteShelter/" +
+          this.props.match.params.id
+        // "http://localhost:3010/deleteShelter/" + this.props.match.params.id
       )
       .then(result => {});
   }
@@ -43,18 +45,26 @@ class EditShelter extends Component {
     console.log("hit handleEdit SHELTER function");
     console.log(this.props.match.params._id);
     axios
-      .put("http://localhost:3010/editShelter/" + this.props.match.params.id, {
-        name: this.state.name,
-        location: this.state.location,
-        beds: this.state.beds,
-        image: this.state.image
-      })
+      .put(
+        "http://roomkind.herokuapp.com/editShelter/" +
+          this.props.match.params.id,
+        {
+          // .put("http://localhost:3010/editShelter/" + this.props.match.params.id, {
+
+          name: this.state.name,
+          location: this.state.location,
+          beds: this.state.beds,
+          image: this.state.image
+        }
+      )
       .then(result => {});
   }
 
   componentDidMount() {
     axios
-      .get("http://localhost:3010/api/roomKind")
+      .get("http://roomkind.herokuapp.com/api/roomKind")
+      // .get("http://localhost:3010/api/roomKind")
+
       .then(res => {
         this.setState({
           shelters: res.data

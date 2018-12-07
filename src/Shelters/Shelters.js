@@ -24,7 +24,9 @@ class Shelters extends Component {
   };
   componentDidMount() {
     axios
-      .get("http://localhost:3010/api/roomKind")
+      .get("http://roomkind.herokuapp.com/api/roomKind")
+      // .get("http://localhost:3010/api/roomKind")
+
       .then(res => {
         this.setState({
           shelters: res.data

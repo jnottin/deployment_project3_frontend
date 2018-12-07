@@ -25,37 +25,17 @@ class ReserveResidence extends Component {
     this.setState(store);
   }
 
-  // submitHandler(e) {
-  //   e.preventDefault();
-  //   fetch("/messages", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/json" },
-  //     data: JSON.stringify(this.state.form)
-  //   });
-  // }
-
   onSubmit = e => {
     e.preventDefault();
     // get our form data out of state
     const { name, email, arrivalTime, numberOfBeds, numberOfDays } = this.state;
-
-    // axios
-    //   .post("/project3roomKind/residences", {
-    //     name,
-    //     email,
-    //     arrivalTime,
-    //     numberOfBeds,
-    //     numberOfDays
-    //   })
-    //   .then(result => {
-    //     //access the results here....
-    //     console.log(result);
-    //   });
   };
 
   componentDidMount() {
     axios
-      .get("http://localhost:3010/api/roomKind/residences")
+      // .get("http://localhost:3010/api/roomKind/residences")
+      .get("http://roomkind.herokuapp.com/api/roomKind/residences")
+
       .then(res => {
         this.setState({
           residences: res.data

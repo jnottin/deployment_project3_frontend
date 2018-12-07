@@ -32,7 +32,9 @@ class NewResidence extends Component {
     document.getElementById("newResidenceForm").style.height = "0";
     event.preventDefault();
     axios
-      .post("http://localhost:3010/project3roomKind/residences", {
+      .post("http://roomkind.herokuapp.com/project3roomKind/residences", {
+        // .post("http://localhost:3010/project3roomKind/residences", {
+
         name: this.state.name,
         image: this.state.image,
         location: this.state.location,

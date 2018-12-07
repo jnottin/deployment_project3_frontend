@@ -1,8 +1,4 @@
 import React, { Component } from "react";
-// import Shelters from "../Shelters/Shelters";
-
-// import "./ListShelter.css"
-
 
 class ReserveShelter extends Component {
   render() {
@@ -31,11 +27,12 @@ class ReserveShelter extends Component {
             </label>
           </div>
           <div>
-            <a href="/"><button>Submit</button></a>
+            <a href="/">
+              <button>Submit</button>
+            </a>
           </div>
         </div>
       </form>
-
     );
   }
 }

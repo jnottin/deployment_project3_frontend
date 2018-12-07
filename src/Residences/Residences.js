@@ -11,7 +11,6 @@ class Residences extends Component {
     this.state = {
       residences: []
     };
-    // this.handleRemove = this.handleRemove.bind(this);
   }
   newResidenceForm = () => {
     if (document.getElementById("newResidenceForm").style.height === "100%") {
@@ -21,17 +20,11 @@ class Residences extends Component {
     }
   };
 
-  // handleRemove = residence => {
-  //   // e.prevexntDefault()
-  //   console.log("hit handleRemove function");
-  //   axios
-  //     .delete("http://localhost:3010/reserveResidence/" + residence)
-  //     .then(result => {});
-  // };
-
   componentDidMount() {
     axios
-      .get("http://localhost:3010/api/roomKind/residences")
+      // .get("http://localhost:3010/api/roomKind/residences")
+      .get("http://roomkind.herokuapp.com/api/roomKind/residences")
+
       .then(res => {
         this.setState({
           residences: res.data
@@ -41,31 +34,6 @@ class Residences extends Component {
         console.log(err);
       });
   }
-
-  // handleUpdate(e) {
-  //   e.preventDefault();
-  //   console.log("hit handleUpdate function");
-  //   axios
-  //     .put("http://localhost:3010/update/" + this.residences._id)
-  //     .then(result => {});
-  // }
-
-  // handleFormSubmit(event) {
-  //   event.preventDefault();
-  //   axios
-  //     .post("http://localhost:3010/project3roomKind/residences", {
-  //       name: this.state.name,
-  //       location: this.state.location,
-  //       numberOfDays: this.state.numberOfDays,
-  //       beds: this.state.beds
-  //     })
-  //     .then(res => {
-  //       console.log(res);
-  //     })
-  //     .catch(err => {
-  //       console.log(err);
-  //     });
-  // }
 
   render() {
     const residences = this.state.residences.map(residences => {
