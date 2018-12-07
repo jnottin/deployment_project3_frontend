@@ -45,11 +45,12 @@ class NewResidence extends Component {
       .catch(err => {
         console.log(err);
       });
+    document.getElementById("newResidenceFormBtn").innerHTML = "Add New Residence";
   }
 
   render() {
     return (
-      <div id="newResidenceForm" className="newResidenceForm">
+      <div id="newResidenceForm" className="closed newResidenceForm">
         <form className="newBookResidence" onSubmit={this.handleFormSubmit}>
           <p>
             <label htmlFor="name">Name Of Residence</label> <br />

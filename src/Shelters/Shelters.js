@@ -18,8 +18,10 @@ class Shelters extends Component {
   newShelterForm = () => {
     if (document.getElementById("newShelterForm").style.height === "100%") {
       document.getElementById("newShelterForm").style.height = "0";
+      document.getElementById("newShelterFormBtn").innerHTML = "Add New Shelter";
     } else {
       document.getElementById("newShelterForm").style.height = "100%";
+      document.getElementById("newShelterFormBtn").innerHTML = "Close Shelter Form";
     }
   };
   componentDidMount() {
@@ -66,7 +68,7 @@ class Shelters extends Component {
     return (
       <div>
         <h2 className="sheltersHeader">Shelters</h2>
-        <button onClick={this.newShelterForm} className="newResidenceFormBtn">
+        <button onClick={this.newShelterForm} id="newShelterFormBtn">
           Add New Shelter
         </button>
         <div>{shelters}</div>
