@@ -67,11 +67,32 @@ class Shelters extends Component {
       );
     });
 
+    // return (
+    //   <div className="shelterSide">
+    //     <div className="shelterButtonHeader">
+    //       <h2 className="sheltersHeader">Shelters</h2>
+
+    //       <button
+    //         onClick={this.newShelterForm}
+    //         className="newFormBtn"
+    //         id="newShelterFormBtn"
+    //       >
+    //         Add New Shelter
+    //   </button>
+    //     </div>
+
+    //     <div className="sheltersBox">{shelters}</div>
+    //   </div>
+    // );
     return (
       <div className="shelterSide">
         <div className="shelterButtonHeader">
           <h2 className="sheltersHeader">Shelters</h2>
-          <button onClick={this.newShelterForm} className="newShelterFormBtn" id="newShelterFormBtn">
+          <button
+            onClick={this.newShelterForm}
+            className="newShelterFormBtn"
+            id="newShelterFormBtn"
+          >
             Add New Shelter
           </button>
         </div>
