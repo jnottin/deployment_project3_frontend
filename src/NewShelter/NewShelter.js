@@ -48,7 +48,7 @@ class NewShelter extends Component {
   render() {
     return (
       <div id="newShelterForm" className="closed newShelterForm">
-        <form className="newShelter" onSubmit={this.handleFormSubmit}>
+        <form className="newBookShelter" onSubmit={this.handleFormSubmit}>
           <p>
             <label htmlFor="Name">Name Of Shelter</label> <br />
             <input

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 // import './HomePage.css';
 import axios from "axios";
 import HomePage from "../HomePage/HomePage";
+import "./EditShelter.css";
 
 class EditShelter extends Component {
   constructor() {
@@ -35,7 +36,7 @@ class EditShelter extends Component {
       .delete(
         "http://localhost:3010/deleteShelter/" + this.props.match.params.id
       )
-      .then(result => { });
+      .then(result => {});
   }
   handleEdit(e) {
     e.preventDefault();
@@ -48,7 +49,7 @@ class EditShelter extends Component {
         beds: this.state.beds,
         image: this.state.image
       })
-      .then(result => { });
+      .then(result => {});
   }
 
   componentDidMount() {
@@ -74,53 +75,62 @@ class EditShelter extends Component {
 
     if (typeof shelter != "undefined") {
       return (
-        <div>
-          <h2>{shelter.name}</h2>
+        <form className="newShelter">
+          <div className="colformS">
+            <h2>{shelter.name}</h2>
+            <div>
+              <p>
+                <label htmlFor="Name">Name Of Shelter</label> <br />
+                <input
+                  type="text"
+                  name="name"
+                  onChange={this.handleInputChange}
+                  value={this.state.name}
+                  // value={shelter.name}
+                  placeholder={shelter.name}
+                />
+              </p>
+            </div>
+            <div>
+              <p>
+                <label htmlFor="location">Location</label> <br />
+                <input
+                  type="text"
+                  name="location"
+                  onChange={this.handleInputChange}
+                  value={this.state.location}
+                  // value={shelter.location}
+                  placeholder={shelter.location}
+                />
+              </p>
+            </div>
 
-          <form className="newShelter">
-            <p>
-              <label htmlFor="Name">Name Of Shelter</label> <br />
-              <input
-                type="text"
-                name="name"
-                onChange={this.handleInputChange}
-                value={this.state.name}
-                // value={shelter.name}
-                placeholder={shelter.name}
-              />
-            </p>
-            <p>
-              <label htmlFor="location">Location</label> <br />
-              <input
-                type="text"
-                name="location"
-                onChange={this.handleInputChange}
-                value={this.state.location}
-                // value={shelter.location}
-                placeholder={shelter.location}
-              />
-            </p>
-            <p>
-              <label htmlFor="beds">Number of Beds</label> <br />
-              <input
-                type="text"
-                name="beds"
-                // value={shelter.beds}
-                value={this.state.beds}
-                onChange={this.handleInputChange}
-                placeholder={shelter.beds}
-              />
-            </p>
-            <p>
-              <button type="submit" onClick={this.handleEdit}>
-                Done With Change!
-              </button>
-              <button type="submit" onClick={this.handleRemove}>
-                Delete Shelter Post
-              </button>
-            </p>
-          </form>
-        </div>
+            <div>
+              <p>
+                <label htmlFor="beds">Number of Beds</label> <br />
+                <input
+                  type="text"
+                  name="beds"
+                  // value={shelter.beds}
+                  value={this.state.beds}
+                  onChange={this.handleInputChange}
+                  placeholder={shelter.beds}
+                />
+              </p>
+            </div>
+
+            <div>
+              <p>
+                <button type="submit" onClick={this.handleEdit}>
+                  Done With Change!
+                </button>
+                <button type="submit" onClick={this.handleRemove}>
+                  Delete Shelter Post
+                </button>
+              </p>
+            </div>
+          </div>
+        </form>
       );
     } else {
       return <h1>order empty</h1>;

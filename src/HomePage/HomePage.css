@@ -1,9 +1,14 @@
 .column {
-    display: inline;
-    float: left;
-    /* display: grid; */
-    width: 50%;
-    background-color: white;
-    color: black;
-    grid-template-columns: 50% 50%;
-  }
+  display: inline;
+  float: left;
+  /* display: grid; */
+  width: 50%;
+  margin: auto;
+  background-color: white;
+  color: black;
+  grid-template-columns: 50% 50%;
+}
+
+.homePage {
+  background: black;
+}
