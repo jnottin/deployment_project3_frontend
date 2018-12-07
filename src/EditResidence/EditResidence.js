@@ -1,4 +1,5 @@
-import React, { Component, Redirect } from "react";
+import React, { Component } from "react";
+import { Redirect, Link } from 'react-router-dom'
 // import './HomePage.css';
 import axios from "axios";
 import "./EditResidence.css";
@@ -43,8 +44,15 @@ class EditResidence extends Component {
           beds: this.state.beds
         }
       )
-      .then(result => {});
+      .then(result => { });
+    this.redirect()
   }
+
+  redirect = () => {
+    console.log("hit redirect function")
+    // return <Redirect exact to="/" />;
+  }
+
   handleRemove(e) {
     e.preventDefault();
     axios
@@ -53,8 +61,7 @@ class EditResidence extends Component {
           this.props.match.params.id
         // "http://localhost:3010/deleteResidence/" + this.props.match.params.id
       )
-      .then(result => {});
-    return <Redirect to="/" />;
+      .then(result => { });
   }
 
   componentDidMount() {
@@ -153,7 +160,7 @@ class EditResidence extends Component {
               <p>
                 <button type="submit" onClick={this.handleEdit}>
                   Done With Change!
-                </button>
+                  </button>
                 <button type="submit" onClick={this.handleRemove}>
                   Delete residence Post
                 </button>
@@ -165,10 +172,7 @@ class EditResidence extends Component {
     } else {
       return (
         <div>
-          <h1>order sdfsd empty</h1>
-          <button type="submit" onClick={this.handleRemove}>
-            Delete residence Post
-          </button>
+          <h1>Residence Deleted, Return To Home Page</h1>
         </div>
       );
     }

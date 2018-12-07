@@ -1,15 +1,6 @@
 .residencesHeader {
   border: 2px solid white;
 }
-
-/* .residencesBody {
-  border: 4px solid green;
-} */
-
-/* .headerAndButton {
-  display: inline;
-} */
-
 .residenceImage {
   height: 150px;
   width: 200px;
@@ -22,11 +13,12 @@
   font-weight: bold;
   text-align: center;
   border: 1px solid black;
-  margin: 10px;
+  margin: 8px;
 
   padding: 2px 5px;
   border-radius: 10px;
   box-shadow: 2px 2px black;
+  height: 400px;
 }
 a:link {
   font-weight: bold;

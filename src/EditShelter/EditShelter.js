@@ -143,7 +143,7 @@ class EditShelter extends Component {
         </form>
       );
     } else {
-      return <h1>order empty</h1>;
+      return <h1>Shelter Deleted, Return To Home Page</h1>;
     }
   }
 }
