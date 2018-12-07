@@ -15,7 +15,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "surge-update": "surge ./build project3-roomkind.surge.sh"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -32,6 +33,7 @@
   },
   "git": {
     "scripts": {
+      "build": "npm run build",
       "pre-push": "surge --project ./ --domain project3-roomkind.surge.sh"
     }
   }
