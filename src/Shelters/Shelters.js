@@ -18,8 +18,10 @@ class Shelters extends Component {
   newShelterForm = () => {
     if (document.getElementById("newShelterForm").style.height === "100%") {
       document.getElementById("newShelterForm").style.height = "0";
+      document.getElementById("newShelterFormBtn").innerHTML = "Add New Shelter";
     } else {
       document.getElementById("newShelterForm").style.height = "100%";
+      document.getElementById("newShelterFormBtn").innerHTML = "Close Shelter Form";
     }
   };
   componentDidMount() {

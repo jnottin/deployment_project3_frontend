@@ -36,7 +36,7 @@ class EditShelter extends Component {
       .delete(
         "http://localhost:3010/deleteShelter/" + this.props.match.params.id
       )
-      .then(result => {});
+      .then(result => { });
   }
   handleEdit(e) {
     e.preventDefault();
@@ -49,7 +49,7 @@ class EditShelter extends Component {
         beds: this.state.beds,
         image: this.state.image
       })
-      .then(result => {});
+      .then(result => { });
   }
 
   componentDidMount() {
@@ -133,7 +133,7 @@ class EditShelter extends Component {
         </form>
       );
     } else {
-      return <h1>order empty</h1>;
+      return <h1>Shelter Deleted, Return To Home Page</h1>;
     }
   }
 }

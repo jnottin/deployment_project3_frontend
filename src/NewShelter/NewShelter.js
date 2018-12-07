@@ -44,6 +44,7 @@ class NewShelter extends Component {
       .catch(err => {
         console.log(err);
       });
+    document.getElementById("newShelterFormBtn").innerHTML = "Add New Shelter";
   }
   render() {
     return (
