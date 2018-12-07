@@ -16,8 +16,11 @@ class Residences extends Component {
   newResidenceForm = () => {
     if (document.getElementById("newResidenceForm").style.height === "100%") {
       document.getElementById("newResidenceForm").style.height = "0";
+      document.getElementById("newResidenceFormBtn").innerHTML = "Add New Residence";
     } else {
       document.getElementById("newResidenceForm").style.height = "100%";
+      document.getElementById("newResidenceFormBtn").innerHTML = "Close Residence Form";
+
     }
   };
 
@@ -87,6 +90,7 @@ class Residences extends Component {
                   <EditResidence
                     list={this.state.residences}
                     match={routerprops.match}
+                    name={this.state.name}
                   />
                 )}
               />
@@ -99,7 +103,7 @@ class Residences extends Component {
     return (
       <div>
         <h2 className="residencesHeader">Residences</h2>
-        <button onClick={this.newResidenceForm} className="newResidenceFormBtn">
+        <button onClick={this.newResidenceForm} id="newResidenceFormBtn">
           Add New Residence
         </button>
         <div>{residences}</div>

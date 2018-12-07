@@ -45,6 +45,7 @@ class NewResidence extends Component {
       .catch(err => {
         console.log(err);
       });
+    document.getElementById("newResidenceFormBtn").innerHTML = "Add New Residence";
   }
 
   render() {
