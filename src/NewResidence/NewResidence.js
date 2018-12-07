@@ -49,7 +49,7 @@ class NewResidence extends Component {
 
   render() {
     return (
-      <div id="newResidenceForm" className="newResidenceForm">
+      <div id="newResidenceForm" className="closed newResidenceForm">
         <form className="newBookResidence" onSubmit={this.handleFormSubmit}>
           <p>
             <label htmlFor="name">Name Of Residence</label> <br />
