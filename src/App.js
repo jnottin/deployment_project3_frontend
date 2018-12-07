@@ -16,12 +16,14 @@ class App extends Component {
       <div className="App">
         <NavBar />
         <NewShelter />
+
         <NewResidence />
-        <Route path="/reserveShelter/:id" exact component={ReserveShelter} />
+
         <Route path="/editResidence/:id" exact component={EditResidence} />
         <Route path="/editShelter/:id" exact component={EditShelter} />
         <Route path="/" exact component={HomePage} />
         <Route path="/reserveResidence/:id" component={ReserveResidence} />
+        <Route path="/reserveShelter/:id" exact component={ReserveShelter} />
       </div>
     );
   }
