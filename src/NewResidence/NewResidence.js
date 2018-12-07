@@ -53,7 +53,7 @@ class NewResidence extends Component {
       <div id="newResidenceForm" className="closed newResidenceForm">
         <form className="newBookResidence" onSubmit={this.handleFormSubmit}>
           <p>
-            <label htmlFor="name">Name Of Residence</label> <br />
+            <label htmlFor="name">Home Owner</label> <br />
             <input
               type="text"
               name="name"
